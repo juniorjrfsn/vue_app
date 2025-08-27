@@ -12,74 +12,131 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/camera" class="nav-link">📸 Câmera</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <main class="main-content">
+    <RouterView />
+  </main>
 </template>
 
+
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.nav-logo a:hover {
+  color: #f0f0f0;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-nav a:first-of-type {
-  border: 0;
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  position: relative;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+.nav-link:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+
+.nav-link.router-link-active {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+}
+
+.main-content {
+  flex: 1;
+  background: #f8f9fa;
+  min-height: calc(100vh - 60px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 15px;
+    height: 50px;
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
+  
+  .nav-logo a {
+    font-size: 1.3rem;
   }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  
+  .nav-menu {
+    gap: 15px;
   }
+  
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .main-content {
+    min-height: calc(100vh - 50px);
+  }
+}
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 15px;
+  }
+  
+  .nav-menu {
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  .nav-link {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .main-content {
+    min-height: calc(100vh - 80px);
   }
 }
 </style>

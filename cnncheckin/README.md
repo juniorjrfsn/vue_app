@@ -37,6 +37,13 @@ Scaffolding project in /home/junior/Documentos/projetos/vue_app/cnncheckin...
 junior@junior-MS-7C09:~/Documentos/projetos/vue_app$ 
 
 ```
+
+
+```
+vue add pwa
+```
+
+
 # cnncheckin
 
 This template should help get you started developing with Vue 3 in Vite.
