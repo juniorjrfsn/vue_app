@@ -53,3 +53,34 @@ Done. Now run:
   npm run dev
 
 ```
+
+
+ 
+
+ 
+junior@junior-MS-7C09:~/Documentos/projetos/vue_app$ npm create vue@latest
+┌  Vue.js - The Progressive JavaScript Framework
+│
+◇  Project name (target directory):
+│  cnncheckin
+│
+◇  Select features to include in your project: (↑/↓ to navigate, space to select, a to toggle all, enter to confirm)
+│  TypeScript, Vitest (unit testing)
+│
+◇  Select experimental features to include in your project: (↑/↓ to navigate, space to select, a to toggle all, enter to confirm)
+│  Oxlint (experimental), rolldown-vite (experimental)
+│
+◇  Skip all example code and start with a blank Vue project?
+│  No
+
+Scaffolding project in /home/junior/Documentos/projetos/vue_app/cnncheckin...
+│
+└  Done. Now run:
+
+   cd cnncheckin
+   npm install
+   npm run dev
+
+| Optional: Initialize Git in your project directory with:
+  
+   git init && git add -A && git commit -m "initial commit"
