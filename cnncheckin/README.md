@@ -1,12 +1,19 @@
 ```
 junior@junior-MS-7C09:~/Documentos/projetos/vue_app$ npm create vue@latest
+
+> npx
+> create-vue
+
 ┌  Vue.js - The Progressive JavaScript Framework
 │
 ◇  Project name (target directory):
 │  cnncheckin
 │
 ◇  Select features to include in your project: (↑/↓ to navigate, space to select, a to toggle all, enter to confirm)
-│  TypeScript, Vitest (unit testing)
+│  TypeScript, JSX Support, Router (SPA development), Pinia (state management), Vitest (unit testing), End-to-End Testing, ESLint (error prevention), Prettier (code formatting)
+│
+◇  Select an End-to-End testing framework: (↑/↓ to navigate, enter to confirm)
+│  Playwright
 │
 ◇  Select experimental features to include in your project: (↑/↓ to navigate, space to select, a to toggle all, enter to confirm)
 │  Oxlint (experimental), rolldown-vite (experimental)
@@ -20,13 +27,16 @@ Scaffolding project in /home/junior/Documentos/projetos/vue_app/cnncheckin...
 
    cd cnncheckin
    npm install
+   npm run format
    npm run dev
 
 | Optional: Initialize Git in your project directory with:
   
    git init && git add -A && git commit -m "initial commit"
-```
 
+junior@junior-MS-7C09:~/Documentos/projetos/vue_app$ 
+
+```
 # cnncheckin
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -46,7 +56,6 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 ## Project Setup
 
 ```sh
-cd cnncheckin
 npm install
 ```
 
@@ -66,4 +75,29 @@ npm run build
 
 ```sh
 npm run test:unit
+```
+
+### Run End-to-End Tests with [Playwright](https://playwright.dev)
+
+```sh
+# Install browsers for the first run
+npx playwright install
+
+# When testing on CI, must build the project first
+npm run build
+
+# Runs the end-to-end tests
+npm run test:e2e
+# Runs the tests only on Chromium
+npm run test:e2e -- --project=chromium
+# Runs the tests of a specific file
+npm run test:e2e -- tests/example.spec.ts
+# Runs the tests in debug mode
+npm run test:e2e -- --debug
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
 ```
