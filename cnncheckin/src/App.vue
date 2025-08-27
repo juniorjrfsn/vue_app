@@ -10,10 +10,10 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
+      <nav class="nav-menu">
+        <RouterLink to="/" class="nav-link">🏠 Home</RouterLink>
         <RouterLink to="/camera" class="nav-link">📸 Câmera</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about" class="nav-link">ℹ️ Sobre</RouterLink>
       </nav>
     </div>
   </header>
@@ -52,13 +52,13 @@ import HelloWorld from './components/HelloWorld.vue'
 .nav-logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .nav-logo a:hover {
-  color: #f0f0f0;
+  color: #cfd49d;
 }
 
 .nav-menu {
@@ -68,7 +68,7 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 
 .nav-link {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   padding: 8px 16px;
