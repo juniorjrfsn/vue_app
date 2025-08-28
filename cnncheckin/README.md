@@ -70,6 +70,7 @@ npm install
 
 ```sh
 npm run dev
+npm run dev -- --https
 ```
 
 ### Type-Check, Compile and Minify for Production
